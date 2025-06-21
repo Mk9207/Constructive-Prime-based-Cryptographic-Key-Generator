@@ -1,38 +1,72 @@
-# 構成的素数ベースの暗号鍵生成器  
-*Constructive Prime-Based Cryptographic Key Generator*
+Constructive Element-Prime Based Cryptographic Key Generator
 
-## 概要  
-このプロジェクトは、A型素数（6n+1構造）に基づいた動的暗号鍵の生成手法を提案・実装するものです。  
-従来の素数系暗号に対して、より構造的かつ再現性の高い鍵生成を可能とし、量子耐性・再構成可能性・AI連携型セキュリティの基盤を提供します。
+構成要素数ベースの暗号鍵生成器
 
-## 背景  
-A型素数とは、6n±1 の形式に従う素数の一種であり、特に6n+1構造は数論的にも安定かつ構成的な再現が可能です。  
-本システムではこの性質を活かし、暗号鍵の一貫性と拡張性を両立した動的鍵生成プロトコルを開発します。
+This repository introduces a cryptographic key generation model based on element primes following the 6n±1 structure, known for their structural stability and uniqueness.
+本リポジトリでは、6n±1構造に準拠したA型素数に基づく構成的な暗号鍵生成モデルを提案します。
 
-## 想定読者
-- セキュリティ技術者・暗号理論研究者  
-- AI連携型セキュリティ基盤の開発者  
-- 構成的数論に興味のある開発者・数学者  
+By leveraging these stable element primes, the system ensures resistance to factorization, suitability for secure key exchange, and integration into modern AI or post-quantum cryptographic systems.
+このモデルは、因数分解耐性と安定性を兼ね備え、AI暗号・量子耐性鍵交換・非対称認証などに応用可能です。
 
-## 応用例
-- 非対称鍵暗号の鍵生成エンジン  
-- 量子暗号・ポスト量子暗号の鍵種候補  
-- AIセキュリティシステムとの統合用動的鍵制御  
-- セキュアな乱数ベースの認証手段（例：OTP・電子署名）  
-
-## トピック
-- 構成的数学  
-- 量子暗号  
-- A型プライム  
-- 鍵生成プロトコル  
-- AIセキュリティ統合  
-
-## ファイル構成
-- `README.md`: 本ドキュメント  
-- `LICENSE`: ライセンス（Apache 2.0）  
-- `特許草案.txt`: 特許提出用の下書き草案  
-- `フローチャート.png`: 鍵生成手順の視覚化図解  
 
 ---
 
-今後、鍵生成アルゴリズムの実装例や検証スクリプトも追加予定です。
+🔍 Background / 背景
+
+The A-type primes (6n±1) are structurally aligned primes with high density and non-trivial distribution properties.
+A型素数（6n±1形）は高密度で非自明な分布を持ち、構造安定性に優れる素数です。
+
+This framework utilizes them to design key generators that are both resilient to attacks and constructively derivable, ensuring secure cryptographic operations.
+本モデルでは、これらを活用し、攻撃耐性と構成的導出性を兼ね備えた鍵生成モデルを構築しています。
+
+
+---
+
+🧠 Intended Audience / 想定読者
+
+Security engineers & cryptographic researchers
+　セキュリティ技術者・暗号理論研究者
+
+AI-based cryptographic protocol designers
+　AI暗号プロトコルの設計者
+
+Mathematicians interested in prime-based construction
+　素数構造に関心のある数学者・技術者
+
+
+
+---
+
+🛠 Applications / 応用例
+
+▸ For specialists（専門向け）
+
+Generator for asymmetric encryption keys
+　非対称暗号鍵の構成生成エンジン
+
+Post-quantum cryptography modules
+　量子耐性暗号モジュールの基盤鍵生成
+
+AI-integrated key exchange protocols
+　AI連動型鍵交換プロトコルの設計
+
+
+▸ For general use（日常応用）
+
+Lightweight secure communication schemes
+　軽量セキュア通信手段（例：OTP生成）
+
+Identity-based secure pairing systems
+　識別情報ベースのセキュアペアリング
+
+
+
+---
+
+🧩 File Structure / ファイル構成
+
+root/
+├── README.md              # 本ドキュメント
+├── LICENSE                # ライセンス (Apache 2.0)
+├── 特許要旨.txt            # 特許提案要点まとめ
+└── フローチャート.png      # 鍵生成手順の構造図
